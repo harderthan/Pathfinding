@@ -19,17 +19,21 @@
     {
       //create a map
       map = new Array();
-      map[0] = "X X X X X X X X X X".split(" ");
-      map[1] = "X S _ _ X X _ X _ X".split(" ");
-      map[2] = "X _ X _ _ X _ _ _ X".split(" ");
-      map[3] = "X _ X X _ _ _ X _ X".split(" ");
-      map[4] = "X _ X _ _ X _ _ _ X".split(" ");
-      map[5] = "X _ _ _ X X _ X _ X".split(" ");
-      map[6] = "X _ X _ _ X _ X _ X".split(" ");
-      map[7] = "X _ X X _ _ _ X _ X".split(" ");
-      map[8] = "X _ _ 0 _ X _ _ _ X".split(" ");
-      map[9] = "X X X X X X X X X X".split(" ");
- 
+      map[0]  = "X X X X X X X X X X".split(" ");
+      map[1]  = "X 0 _ _ X X _ X _ X".split(" ");
+      map[2]  = "X _ X _ _ X _ _ _ X".split(" ");
+      map[3]  = "X _ X X _ _ _ X _ X".split(" ");
+      map[4]  = "X _ X _ _ X _ X _ X".split(" ");
+      map[5]  = "X _ X _ X X _ X _ X".split(" ");
+      map[6]  = "X _ X _ X X _ X _ X".split(" ");
+      map[7]  = "X _ X X _ _ _ X _ X".split(" ");
+      map[8]  = "X _ _ X _ X _ X _ X".split(" ");
+      map[9]  = "X _ _ X _ X _ X _ X".split(" ");
+  	  map[10] = "X _ X _ _ X _ X _ X".split(" ");
+	  map[11] = "X X _ _ X _ _ _ _ X".split(" ");
+  	  map[12] = "X X X _ X X X _ X X".split(" ");
+	  map[13] = "X S _ _ _ _ _ _ X X".split(" ");
+  	  map[14] = "X X X X X X X X X X".split(" ");
      // mapSpriteBefore = createVisualMap(map);
      // addChild(mapSpriteBefore);
  
@@ -80,8 +84,8 @@
  
       if (paths != null)
       {
-		 /*
-        for (i = 1; i < paths.length; i++)
+		 
+        for (i = 0; i < paths.length-1; i++)
         {
 		  var mapElement2:Sprite = new Sprite();
 		  mapElement2.graphics.beginFill(0x0FF000, .5);
@@ -93,7 +97,8 @@
           mapElement2.y = paths[i].i * MAP_ELEMENT_SIZE;
 		  mapSprite.addChild(mapElement2);
           //mapSprite.addChild(label_txt);
-        }*/
+        }
+		
 		 for (i = 0; i < paths.length; i++)
         {
           var label_txt:TextField = new TextField();
@@ -102,6 +107,9 @@
           label_txt.y = paths[i].i * MAP_ELEMENT_SIZE;
           mapSprite.addChild(label_txt);
         }
+		
+		
+		
       }
       return mapSprite;
     }
