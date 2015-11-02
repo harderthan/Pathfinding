@@ -20,19 +20,19 @@
       //create a map
       map = new Array();
       map[0]  = "X X X X X X X X X X".split(" ");
-      map[1]  = "X 0 _ _ X X _ X _ X".split(" ");
+      map[1]  = "X _ _ _ X X _ X _ X".split(" ");
       map[2]  = "X _ X _ _ X _ _ _ X".split(" ");
-      map[3]  = "X _ X X _ _ _ X _ X".split(" ");
+      map[3]  = "X _ X X _ _ _ X 0 X".split(" ");
       map[4]  = "X _ X _ _ X _ X _ X".split(" ");
       map[5]  = "X _ X _ X X _ X _ X".split(" ");
       map[6]  = "X _ X _ X X _ X _ X".split(" ");
       map[7]  = "X _ X X _ _ _ X _ X".split(" ");
       map[8]  = "X _ _ X _ X _ X _ X".split(" ");
       map[9]  = "X _ _ X _ X _ X _ X".split(" ");
-  	  map[10] = "X _ X _ _ X _ X _ X".split(" ");
+  	  map[10] = "X S X _ _ X _ X _ X".split(" ");
 	  map[11] = "X X _ _ X _ _ _ _ X".split(" ");
   	  map[12] = "X X X _ X X X _ X X".split(" ");
-	  map[13] = "X S _ _ _ _ _ _ X X".split(" ");
+	  map[13] = "X _ _ _ _ _ _ _ X X".split(" ");
   	  map[14] = "X X X X X X X X X X".split(" ");
      // mapSpriteBefore = createVisualMap(map);
      // addChild(mapSpriteBefore);
