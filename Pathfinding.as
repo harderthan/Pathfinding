@@ -48,7 +48,7 @@
       var i:int;
  
       var mapSprite:Sprite = new Sprite();
-      for (i = 0; i < mapArray.length; i++)
+      for (i = 0; i < mapArray.length; i++)	// 맵의 색깔을 입히는 과정 (벽, 통로, 시작점, 출발점)
       {
         for (var j:int = 0; j < mapArray[i].length; j++)
         {
@@ -82,7 +82,7 @@
         }
       }
  
-      if (paths != null)
+      if (paths != null)	// 최단경로를 그래픽화
       {
 		 
         for (i = 0; i < paths.length-1; i++)

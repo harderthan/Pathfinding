@@ -24,14 +24,14 @@
     public static function findPath(map:Array):Array
     {
       var i:int, j:int;
-      _queue = new Array();
-	  _array = new Array();
+      _queue = new Array(); //도착지점부터 시작점까지 찾는 모든 경로가 들어가는 배열
+	  _array = new Array(); //하나의 최단경로가 들어갈 배열
       _map = map;
  
       //first find the coordinate of finish which is a first object
       var finishObject:Object;
       var counter:int = 0;
-      for (i = 0; i < _map.length; i++)
+      for (i = 0; i < _map.length; i++)	// checkQueue에 들어갈 최초 입력값을 구함
       {
         for (j = 0; j < _map[i].length; j++)
         {
@@ -44,7 +44,7 @@
       }
 	  _queue.push(finishObject);
 	  
-	   for (i = 0; i < _map.length; i++)
+	   for (i = 0; i < _map.length; i++)	// 도착점의 i, j 값을 finishObject에 저장
       {
         for (j = 0; j < _map[i].length; j++)
         {
@@ -62,7 +62,7 @@
       return _array;
     }
  
-    private static function checkQueue(startIndex:int, counter:int):void
+    private static function checkQueue(startIndex:int, counter:int):void  //상하좌우를 통해 시작점이 있는가 확인하고 없으면 _queue에 넣고 conter증가 후 반복
     {
       var lastQueueLength:int = _queue.length;
       var i:int;
@@ -111,7 +111,7 @@
       checkQueue(lastQueueLength, counter + 1);
     }
 	
-	private static function checkPath(counter:int,x:int, y:int):void
+	private static function checkPath(counter:int,x:int, y:int):void	//_queue에 들어가있는 경로들중 도착점과 시작점을 이어주는 하나의 경로만 걸러냄
 	{
 		var i:int ;
 		trace(x,y,counter);
